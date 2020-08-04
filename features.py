@@ -79,6 +79,3 @@ def features(d):
             ]
 
   return np.array(result), traf['src'], traf['dst'],
-
-
-

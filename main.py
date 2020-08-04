@@ -1,4 +1,3 @@
-import numpy
 from extraction import getData
 from features import features
 import argparse

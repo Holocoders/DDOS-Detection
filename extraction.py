@@ -1,7 +1,7 @@
 from scapy.all import *
 import os
 from collections import defaultdict as dd
-
+from tqdm import tqdm
 from scapy.layers.inet import IP
 from scapy.layers.l2 import Ether
 
@@ -63,7 +63,7 @@ def getData(pcap):
     dst = []
     size = []
     traffic = dd(lambda: 0)
-    for (pkt_data, pkt_metadata) in RawPcapReader(pcap):
+    for (pkt_data, pkt_metadata) in tqdm(RawPcapReader(pcap)):
         count += 1
         ether = Ether(pkt_data)
         ip = IP(pkt_data)

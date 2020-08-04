@@ -1,4 +1,3 @@
-import numpy
 from extraction import getData
 from features import features
 import argparse
@@ -19,7 +18,7 @@ def readData():
 def eval(path):
     result = getData(path)
     result, src, dst = features(result)
-    result = result.T
+    result = result.reshape(1, -1)
     model, scaler, df = readData()
     preds = model.predict(result)
     if preds[0] == 1:

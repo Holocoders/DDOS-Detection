@@ -4,3 +4,5 @@ Ddos_Detection_Dataset
 Ddos_Detection_Dataset_Part2
 venv
 .idea
+__pycache__
+Datas

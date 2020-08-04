@@ -6,7 +6,7 @@ import pickle
 
 def write(src, dst):
     with open('result.txt', 'w') as f:
-        f.write('{} {}'.format(src, dst))
+        f.write('src: {}     dst: {}'.format(src, dst))
 
 
 def readData():
